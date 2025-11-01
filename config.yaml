@@ -1,14 +1,11 @@
 name: "VAN CanBus"
 description: "Enable the use of CANFAN in Home Assistant core"
-version: "1.0.0"
-slug: "vanCanBus"
+version: "1.0.17"
+slug: "van_can_bus"
 init: false
 arch:
   - aarch64
   - amd64
-  - armhf
-  - armv7
-  - i386
 startup: services
 host_network: true
 privileged:
@@ -20,5 +17,5 @@ schema:
   device: str
   bitrate: int(10000,1000000)
 
-EXPOSE 8000
-
+ports:
+  8000/tcp: 8000
