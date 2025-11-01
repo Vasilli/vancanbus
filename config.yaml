@@ -1,6 +1,6 @@
 name: "VAN CanBus"
 description: "Enable the use of CANFAN in Home Assistant core"
-version: "1.0.17"
+version: "1.0.18"
 slug: "van_can_bus"
 init: false
 arch:

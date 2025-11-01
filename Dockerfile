@@ -8,7 +8,6 @@ WORKDIR /opt
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install requirements for add-on
-#    icu-data-full \
 #    erlang \
 #    rebar3 \
 RUN \
@@ -16,13 +15,18 @@ RUN \
     python3 \
     iproute2 \
     can-utils \
+    icu-data-full \
   && apk add --no-cache --virtual .build-dependencies \
     build-base \
     linux-headers \
     autoconf \
     openssl \
     git \
-    openssl-dev
+    nodejs \
+    npm \
+    openssl-dev \
+    \
+    && cd /opt
 
 
 # Copy data for add-on
